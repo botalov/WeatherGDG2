@@ -10,41 +10,53 @@
     android:background="@color/colorBackground"
     tools:context="com.example.botalovns.weathergdg.MainActivity">
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:onClick="onChangeCityButton"
+        android:src="@drawable/format_list_bulleted"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:background="@android:color/transparent"
+        />
+
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_centerVertical="true"
+        android:gravity="center">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:onClick="onChangeCityButton">
             <TextView
                 android:id="@+id/cityTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Пермь"
+                android:text="-"
                 android:textSize="24sp"
                 android:textColor="@android:color/white"
                 android:gravity="center"
                 />
 
-            <ImageButton
+           <!-- <ImageButton
                 android:id="@+id/changeCityButton"
                 android:src="@drawable/ic_pencil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_marginLeft="10dp"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"/>-->
         </LinearLayout>
         <ImageView
             android:id="@+id/sunImageView"
-            android:src="@drawable/sun"
             android:layout_marginTop="50dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -55,7 +67,7 @@
                 android:id="@+id/tempTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="25"
+                android:text="-"
                 android:textSize="40sp"
                 android:textColor="@android:color/white"
                 />
@@ -67,75 +79,75 @@
                 android:textSize="40sp"
                 android:textColor="@android:color/white"
                 />
-
-
-
         </LinearLayout>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="right|bottom"
+        android:gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+        <!--Давление-->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:orientation="vertical"
-            android:layout_marginTop="40dp">
-            <!--Давление-->
-            <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="5dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text="Давление "/>
-                <TextView
-                    android:id="@+id/pressureTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text="469"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text=" мм рт. ст."/>
-            </LinearLayout>
-
-            <!--Ветер-->
-            <LinearLayout
+                android:textColor="@android:color/white"
+                android:text="Давление "/>
+            <TextView
+                android:id="@+id/pressureTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text="Ветер "/>
-                <TextView
-                    android:id="@+id/windTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text="южный"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text=" , "/>
-                <TextView
-                    android:id="@+id/windPowerTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text="20"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text=" м/с "/>
-            </LinearLayout>
+                android:textColor="@android:color/white"
+                android:text="-"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text=" мм рт. ст."/>
         </LinearLayout>
 
+        <!--Ветер-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="Ветер "/>
+            <TextView
+                android:id="@+id/windTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="-"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text=" , "/>
+            <TextView
+                android:id="@+id/windPowerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="-"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text=" м/с "/>
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

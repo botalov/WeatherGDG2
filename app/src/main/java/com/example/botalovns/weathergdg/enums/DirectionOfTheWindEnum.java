@@ -1,8 +1,5 @@
 package com.example.botalovns.weathergdg.enums;
 
-/**
- * Created by BotalovNS on 05.07.2016.
- */
 public enum DirectionOfTheWindEnum {
     SOUTH, //Юг
     EAST, // Восток
@@ -11,5 +8,6 @@ public enum DirectionOfTheWindEnum {
     SOUTHWEST, // юго-запад
     SOUTHEAST, // юго-восток
     NORTHWEST, // северо-запад
-    NORTHEAST // северо-восток
+    NORTHEAST, // северо-восток
+    NONE // Не определенно
 }

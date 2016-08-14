@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">WeatherGDG</string>
+
+    <!-- DataBase -->
+    <string name="db_name">weatherDB</string>
+    <string name="table_weather_name">weatherTable</string>
+    <string name="db_version">4</string>
+    <!-- DataBase -->
+
+    <!-- Web -->
+    <string name="weather_address">http://api.openweathermap.org/data/2.5/weather?</string>
+    <string name="weather_key">6ca0bf228a671185de07691a4e09b1b3</string>
+
+    <string name="city_address">http://api.geonames.org/searchJSON?q=</string>
+    <string name="city_username">botalovDev</string>
+    <!-- Web -->
+
+    <!-- Interface -->
+    <string name="message_dialog_get_location">Определение местоположения</string>
+    <string name="error_get_location">Не удалось определить местоположение. Разрешите доступ на устройстве к геолокации и передаче данных</string>
+    <string name="message_dialog_get_weather">Получение данных</string>
+    <string name="error_get_weather">Не удалось получить данные о погоде</string>
+
+    <string name="double_back_press">Нажмите кнопку НАЗАД еще раз для того, чтобы выйти из приложения</string>
+    <string name="search_text">Поиск города</string>
+    <string name="not_cities">В базе нет сохраненных городов. Добавьте новый.</string>
+    <string name="not_internet">Отсутствует интернет-соединение. Для получения актуальных данных включите передачу данных на устройстве.</string>
+    <string name="not_cities_and_connection">В базе нет сохраненных городов и отсутствует интернет-соединение. Подключите интернет и добавьте новый город.</string>
+    <!-- Interface -->
+
+    <!-- Направления ветра -->
+    <string name="wind_NORTH">Северный</string>
+    <string name="wind_SOUTH">Южный</string>
+    <string name="wind_WEST">Западный</string>
+    <string name="wind_EAST">Восточный</string>
+    <string name="wind_NORTHEAST">Северо-восточный</string>
+    <string name="wind_SOUTHEAST">Юго-восточный</string>
+    <string name="wind_SOUTHWEST">Юго-западный</string>
+    <string name="wind_NORTHWEST">Северо-западный</string>
+    <string name="wind_NONE">Штиль</string>
+    <!-- Направления ветра -->
 </resources>

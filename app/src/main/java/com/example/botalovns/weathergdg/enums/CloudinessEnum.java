@@ -1,11 +1,10 @@
 package com.example.botalovns.weathergdg.enums;
 
-/**
- * Created by BotalovNS on 05.07.2016.
- */
+
 public enum  CloudinessEnum {
     SUN, // Солнечно
     CLODY, // Пасмурно
+    SUN_CLOUDY, // Переменная облачность
     RAIN,  // Дождь
-    FOG  //Туман
+    NONE  // Не определенно
 }

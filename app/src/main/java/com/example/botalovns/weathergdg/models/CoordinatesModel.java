@@ -1,9 +1,22 @@
 package com.example.botalovns.weathergdg.models;
 
-/**
- * Created by BotalovNS on 05.07.2016.
- */
 public class CoordinatesModel {
-    public double latitude; // широта
-    public double longitude; // долгота
+    private double latitude; // широта
+    private double longitude; // долгота
+
+    public double getLatitude(){
+        return latitude;
+    }
+    public double getLongitude(){
+        return longitude;
+    }
+
+    public CoordinatesModel(double latitude, double longitude){
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+    public CoordinatesModel(){
+        this.latitude = 0;
+        this.longitude = 0;
+    }
 }
